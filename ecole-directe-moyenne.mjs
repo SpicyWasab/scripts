@@ -7,8 +7,8 @@ import ora from 'ora';
 
 // MAIN PART
 // prompt for credentials
-const username = await prompt('Identifiant : ');
-const password = await prompt.password('Mot de passe : ');
+const username = process.env.ECOLE_DIRECTE_USERNAME ?? await prompt('Identifiant : ');
+const password = process.env.ECOLE_DIRECTE_PASSWORD ?? await prompt.password('Mot de passe : ');
 
 
 // login to ecoledirecte
